@@ -121,42 +121,34 @@ nav .theme-switcher {
   cursor: pointer;
 }
 
-/* ===============================
-   HERO / HERO ART
-   =============================== */
+/* HERO ART LAYOUT */
 .hero-art {
-  height: 70vh; /* or whatever height you like */
+  height: 70vh;
   background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
   display: flex;
-  align-items: center;   /* vertical center */
-  justify-content: center; /* horizontal center */
+  align-items: center;       /* vertical center */
+  justify-content: center;   /* horizontal center */
+  flex-direction: column;    /* stack overlay content vertically */
   position: relative;
 }
 
+/* Center overlay text and buttons */
 .hero-overlay {
-  text-align: center;        /* center text horizontally */
+  text-align: center;
   color: #fff;
   padding: 2rem 1rem;
-  background: rgba(0, 0, 0, 0.55);
+  background: rgba(0,0,0,0.55);
   border-radius: 10px;
   backdrop-filter: blur(3px);
-  max-width: 90%;            /* optional: prevent overlay from stretching too wide */
-}color: #fff;
-  backdrop-filter: blur(3px);
+  display: flex;
+  flex-direction: column;    /* stack heading + paragraph + buttons */
+  align-items: center;       /* horizontal center */
+  gap: 1.5rem;               /* spacing between elements */
 }
 
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
+/* Push the buttons row slightly lower */
 .hero-btn {
-  display: inline-block;
+  margin-top: 1rem;          /* spacing from the paragraph above */
   padding: 0.6rem 1.5rem;
   border: 2px solid #fff;
   color: #fff;
@@ -168,6 +160,17 @@ nav .theme-switcher {
 .hero-btn:hover {
   background: #fff;
   color: #000;
+}
+
+/* Move “ThisIsArtElias” logo under buttons for mobile/hero effect */
+.logo {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin-top: 1.5rem; /* space below buttons */
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--text-color);
 }
 
 /* ===============================
