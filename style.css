@@ -74,10 +74,6 @@ section {
 /* ===============================
    NAVIGATION
    =============================== */
-
-
-/*end chatgpt add*/
-
 /* Nav background container */
 .nav-background {
   display: flex;
@@ -116,26 +112,6 @@ section {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   transition: all 0.3s ease;
-}
-
-.nav-main ul li a:hover,
-.nav-actions button:hover {
-  background: rgba(255, 255, 255, 0.25);
-  color: #fff;
-  transform: translateY(-2px);
-}
-
-/* Mobile adjustments */
-@media (max-width: 768px) {
-  .nav-background {
-    width: 100%;
-    padding: 0.5rem 0.75rem;
-  }
-
-  .nav-main ul {
-    flex-direction: column;
-    gap: 0.5rem;
-  }
 }
 
 
