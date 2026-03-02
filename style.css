@@ -4,7 +4,7 @@
 :root {
   --bg-color: #1a1a1a;
   --text-color: #eee;
-  --section-bg: #2b2b2b;
+  --section-bg: transparent;
   --section-text: #eee;
   --btn-bg: #333;
   --btn-text: #eee;
@@ -18,7 +18,7 @@
 body.light-mode {
   --bg-color: #f5f5f5;
   --text-color: #111;
-  --section-bg: #ffffff;
+  --section-bg: transparent;
   --section-text: #111;
   --btn-bg: #ddd;
   --btn-text: #111;
@@ -44,15 +44,13 @@ body {
 .lang-nl { display: none; }
 
 section {
-  background: var(--section-bg);
-  color: var(--section-text);
   padding: 5rem 2rem;
   max-width: 1200px;
   margin: 0 auto;
-  border-radius: 0; /* remove rounded boxes */
-  background: transparent; /* cleaner gallery look */
+  background: var(--section-bg);
+  color: var(--section-text);
+  transition: background 0.4s ease, color 0.4s ease;
 }
-
 
 /* ===============================
    TOP BANNER
@@ -81,7 +79,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: var(--section-bg);
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -116,7 +115,6 @@ nav .theme-switcher {
   cursor: pointer;
 }
 
-/* Hamburger for mobile */
 .hamburger {
   display: none;
   font-size: 2rem;
@@ -124,35 +122,53 @@ nav .theme-switcher {
 }
 
 /* ===============================
-   HERO
+   HERO / HERO ART
    =============================== */
-.hero {
-  text-align: center;
-  max-width: 700px;
-  margin: 0 auto;
+.hero-art {
+  height: 70vh;
+  background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.hero h1 { font-size: 2rem; }
-.hero p { font-size: 1.1rem; }
+.hero-overlay {
+  background: rgba(0,0,0,0.55);
+  padding: 3rem 2rem;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  backdrop-filter: blur(3px);
+}
 
-.hero a {
+.hero-overlay h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-btn {
   display: inline-block;
   padding: 0.6rem 1.5rem;
-  border-radius: 6px;
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  border: 1px solid var(--btn-border);
+  border: 2px solid #fff;
+  color: #fff;
   text-decoration: none;
-  transition: background 0.3s, color 0.3s;
+  border-radius: 6px;
+  transition: 0.3s;
 }
 
-.hero a:hover {
-  background: var(--btn-text);
-  color: var(--btn-bg);
+.hero-btn:hover {
+  background: #fff;
+  color: #000;
 }
 
 /* ===============================
-   BUTTONS
+   BUTTONS & LINKS
    =============================== */
 button, a {
   background: var(--btn-bg);
@@ -195,49 +211,41 @@ form input, form textarea {
 }
 
 /* ===============================
-   PORTFOLIO GRID
+   PORTFOLIO GRID & HOMEPAGE FEATURED
    =============================== */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-}
-
-.portfolio-grid img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.portfolio-grid img:hover {
-  transform: scale(1.05);
-  border-color: #000000;
-}
-
-/* ===============================
-   HOMEPAGE FEATURED WORKS (match portfolio)
-   =============================== */
+.portfolio-grid,
 .homepage-featured {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 1.5rem;
 }
 
+.portfolio-grid img,
 .homepage-featured img {
   width: 100%;
-  height: 250px; /* fixed height like portfolio */
+  height: auto;
+  max-height: 250px;
   object-fit: cover;
-  border-radius: 6px;
-  border: 2px solid var(--card-border);
-  transition: transform 0.3s, border-color 0.3s;
+  border-radius: 4px;
+  transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
+.portfolio-grid img:hover,
 .homepage-featured img:hover {
-  transform: scale(1.05);
-  border-color: #000000;
+  transform: scale(1.03);
+  opacity: 0.95;
 }
+
+/* ===============================
+   GET-IN-TOUCH SECTION
+   =============================== */
+.get-in-touch {
+  text-align: center;
+}
+
+.get-in-touch a {
+  display: inline-block;
+  margin-top: 1rem;
 }
 
 /* ===============================
@@ -245,60 +253,14 @@ form input, form textarea {
    =============================== */
 .fade-up {
   opacity: 0;
-  transform: translateY(40px);
-  animation: fadeUp 0.8s forwards;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
 }
 
-.fade-up.delay1 { animation-delay: 0.2s; }
-.fade-up.delay2 { animation-delay: 0.4s; }
-.fade-up.delay3 { animation-delay: 0.6s; }
-
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.fade-up.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
-
-/* ==============================
-   MOBILE FIXES
-   ============================== */
-@media (max-width: 768px) {
-  nav {
-    padding: 1rem; /* reduce horizontal padding */
-    flex-wrap: wrap; /* allow items to wrap instead of overflowing */
-  }
-
-  .hamburger {
-    display: block;
-    margin-left: auto; /* push it to the right */
-  }
-
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 0; /* remove default ul padding */
-    margin: 0;
-    box-sizing: border-box; /* make sure width includes padding */
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav .logo {
-    flex: 1 1 auto; /* allow logo to take remaining space */
-  }
-
-  nav .nav-actions {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start; /* or flex-end if you like */
-    margin-top: 0.5rem;
-  }
-}
-
 
 /* ===============================
    FOOTER
@@ -311,94 +273,40 @@ footer {
 }
 
 /* ===============================
-   LIGHT MODE TRANSITIONS
+   MOBILE FIXES
    =============================== */
-body.light-mode nav,
-body.light-mode section,
-body.light-mode footer,
-body.light-mode button,
-body.light-mode a {
-  transition: background 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+@media (max-width: 768px) {
+  nav {
+    padding: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  nav ul.active {
+    display: flex;
+  }
+
+  nav .logo {
+    flex: 1 1 auto;
+  }
+
+  nav .nav-actions {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
 }
-
-
-.get-in-touch {
-  text-align: center; /* centers text and inline elements */
-}
-
-.get-in-touch .cta {
-  display: inline-block;  /* ensures the button stays centered */
-  margin-top: 1rem;
-}
-
-/* ===============================
-   HERO ART BACKGROUND
-   =============================== */
-.hero-art {
-  height: 70vh;
-  background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Dark overlay for readability */
-.hero-overlay {
-  background: rgba(0,0,0,0.55);
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-  backdrop-filter: blur(3px);
-}
-
-.hero-overlay h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-.hero-overlay p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-}
-
-/* Button */
-.hero-btn {
-  display: inline-block;
-  padding: 0.6rem 1.5rem;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.hero-btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-.hero {
-  text-align: center;
-}
-
-/*Featured works cleaner*/
-
-.portfolio-grid img,
-.homepage-featured img {
-  border-radius: 8px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-}
-
-portolio-grid img:hover,
-.homepage-featured img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-}
-
-
-/*scoll animation*/
-.fade-up { opacity: 0; transform: translateY(30px); transition: all .6s ease; }
-.fade-up.animate { opacity: 1; transform: translateY(0); }
