@@ -125,20 +125,23 @@ nav .theme-switcher {
    HERO / HERO ART
    =============================== */
 .hero-art {
-  height: 70vh;
+  height: 70vh; /* or whatever height you like */
   background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: center;   /* vertical center */
+  justify-content: center; /* horizontal center */
   position: relative;
 }
 
 .hero-overlay {
-  background: rgba(0,0,0,0.55);
-  padding: 3rem 2rem;
-  border-radius: 10px;
-  text-align: center;
+  text-align: center;        /* center text horizontally */
   color: #fff;
+  padding: 2rem 1rem;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  max-width: 90%;            /* optional: prevent overlay from stretching too wide */
+}color: #fff;
   backdrop-filter: blur(3px);
 }
 
