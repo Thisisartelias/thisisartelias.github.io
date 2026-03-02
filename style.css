@@ -338,3 +338,17 @@ footer {
     margin-top: 0.5rem;
   }
 }
+
+/* Move EN/NL + theme buttons below main nav and center */
+.nav-actions {
+  display: flex;
+  justify-content: center;   /* center horizontally */
+  gap: 1rem;                 /* space between buttons */
+  margin-top: 1rem;          /* space below main nav buttons */
+}
+
+/* Make buttons slightly smaller and aligned nicely */
+.nav-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
