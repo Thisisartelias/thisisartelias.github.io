@@ -74,31 +74,77 @@ section {
 /* ===============================
    NAVIGATION
    =============================== */
+/* nav container */
 nav {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;  /* stack main nav and switchers vertically */
+  align-items: center;     /* center everything */
   padding: 1rem 2rem;
-  background: rgba(0,0,0,0.6);
-  backdrop-filter: blur(8px);
+  background: var(--section-bg);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: background 0.4s ease;
 }
 
-/* Stack buttons and logo vertically on homepage */
-nav {
-  flex-direction: column; /* stack elements vertically */
-  align-items: center;    /* center horizontally */
-}
-
-/* Buttons row */
-.nav-actions {
+/* main nav links row */
+.nav-main ul {
   display: flex;
   gap: 1rem;
-  justify-content: center;
-  margin-bottom: 0.5rem; /* space below buttons before logo */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main ul li a {
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  text-decoration: none;
+  border: 1px solid var(--btn-border);
+  transition: background 0.3s, color 0.3s;
+}
+
+.nav-main ul li a:hover {
+  background: var(--btn-text);
+  color: var(--btn-bg);
+}
+
+/* language & theme row */
+.nav-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem; /* space below main nav buttons */
+}
+
+.nav-actions button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* Hamburger for mobile */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  margin-top: 0.5rem;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+  .nav-main ul {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+  }
+
+  nav {
+    padding: 1rem;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
 
 /* Logo under buttons */
