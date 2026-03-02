@@ -87,6 +87,28 @@ nav {
   transition: background 0.4s ease;
 }
 
+/* Stack buttons and logo vertically on homepage */
+nav {
+  flex-direction: column; /* stack elements vertically */
+  align-items: center;    /* center horizontally */
+}
+
+/* Buttons row */
+.nav-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 0.5rem; /* space below buttons before logo */
+}
+
+/* Logo under buttons */
+nav .logo {
+  display: block;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-align: center;
+  color: var(--text-color);
+}
 nav ul {
   display: flex;
   gap: 1rem;
