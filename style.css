@@ -46,12 +46,13 @@ body {
 section {
   background: var(--section-bg);
   color: var(--section-text);
-  padding: 4rem 2rem;
-  max-width: 1100px;
-  margin: 2rem auto;
-  border-radius: 8px;
-  transition: background 0.4s ease, color 0.4s ease;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 0; /* remove rounded boxes */
+  background: transparent; /* cleaner gallery look */
 }
+
 
 /* ===============================
    TOP BANNER
