@@ -74,6 +74,74 @@ section {
 /* ===============================
    NAVIGATION
    =============================== */
+
+
+/*end chatgpt add*/
+
+/* Nav background container */
+.nav-background {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin-top: 0.5rem; /* optional spacing from logo */
+
+  background: rgba(0, 0, 0, 0.35); /* semi-transparent black */
+  backdrop-filter: blur(8px);       /* frosted glass effect */
+  border-radius: 12px;              /* optional rounded corners */
+}
+
+/* Main nav row */
+.nav-main ul {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0.25rem 0;
+}
+
+/* Language + theme row */
+.nav-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem; /* space below main buttons */
+}
+
+/* Button styling */
+.nav-main ul li a,
+.nav-actions button {
+  background: rgba(255, 255, 255, 0.1); /* slightly transparent */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-main ul li a:hover,
+.nav-actions button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .nav-background {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .nav-main ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
+
+
+/* nav container */
+
+
 /* nav container */
 nav {
   display: flex;
