@@ -300,3 +300,28 @@ nav ul.active{
 }
 
 }
+
+
+/* ===============================
+PRIMARY CTA
+=============================== */
+
+.cta {
+
+  border: 2px solid white;
+
+  padding: 12px 26px;
+
+  font-weight: 600;
+
+  margin-top: 20px;
+
+  display: inline-block;
+}
+
+.cta:hover {
+
+  background: white;
+  color: black;
+
+}
