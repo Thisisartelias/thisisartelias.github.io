@@ -1,14 +1,14 @@
 /* ===============================
-   THEME VARIABLES
-   =============================== */
+THEME VARIABLES
+=============================== */
 :root {
   --bg-color: #1a1a1a;
   --text-color: #eee;
   --section-bg: transparent;
   --section-text: #eee;
-  --btn-bg: #333;
+  --btn-bg: rgba(255,255,255,0.1);
   --btn-text: #eee;
-  --btn-border: #444;
+  --btn-border: rgba(255,255,255,0.2);
   --card-bg: #333;
   --card-border: #ccc;
   --banner-bg: #ff7f00;
@@ -20,50 +20,48 @@ body.light-mode {
   --text-color: #111;
   --section-bg: transparent;
   --section-text: #111;
-  --btn-bg: #ddd;
+  --btn-bg: rgba(0,0,0,0.08);
   --btn-text: #111;
-  --btn-border: #aaa;
+  --btn-border: rgba(0,0,0,0.2);
   --card-bg: #fafafa;
-  --card-border: #ccc;
 }
 
 /* ===============================
-   BASE STYLES
-   =============================== */
+BASE
+=============================== */
+
 body {
   background: var(--bg-color);
   color: var(--text-color);
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   line-height: 1.6;
-  transition: background 0.4s ease, color 0.4s ease;
+  transition: 0.4s;
 }
-
-/* Language defaults */
-.lang-en { display: inline; }
-.lang-nl { display: none; }
 
 section {
   padding: 5rem 2rem;
   max-width: 1200px;
-  margin: 0 auto;
-  background: var(--section-bg);
-  color: var(--section-text);
-  transition: background 0.4s ease, color 0.4s ease;
+  margin: auto;
 }
 
 /* ===============================
-   TOP BANNER
-   =============================== */
+LANGUAGE
+=============================== */
+
+.lang-en { display: inline; }
+.lang-nl { display: none; }
+
+/* ===============================
+TOP BANNER
+=============================== */
+
 .top-banner {
   background: var(--banner-bg);
   color: var(--banner-text);
   text-align: center;
-  padding: 0.75rem;
+  padding: 10px;
   font-weight: bold;
-  position: sticky;
-  top: 0;
-  z-index: 1001;
 }
 
 .top-banner span {
@@ -72,266 +70,203 @@ section {
 }
 
 /* ===============================
-   NAVIGATION
-   =============================== */
+NAVIGATION
+=============================== */
 
-
-
-/* nav container */
 nav {
   display: flex;
-  flex-direction: column;  /* stack main nav and switchers vertically */
-  align-items: center;     /* center everything */
-  padding: 1rem 2rem;
-  background: var(--section-bg);
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
-/* main nav links row */
-.nav-main ul {
+/* Glass container */
+.nav-main {
   display: flex;
-  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px 18px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border-radius: 12px;
+}
+
+/* main buttons */
+nav ul {
+  display: flex;
+  gap: 14px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.nav-main ul li a {
-  background: var(--btn-bg);
-  color: var(--btn-text);
-  padding: 0.5rem 1rem;
-  border-radius: 6px;
-  text-decoration: none;
-  border: 1px solid var(--btn-border);
-  transition: background 0.3s, color 0.3s;
-}
-
-.nav-main ul li a:hover {
-  background: var(--btn-text);
-  color: var(--btn-bg);
-}
-
-/* language & theme row */
-.nav-actions {
-  display: flex;
-  gap: 0.5rem;
-  margin-top: 0.75rem; /* space below main nav buttons */
-}
-
-.nav-actions button {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
-}
-
-/* Hamburger for mobile */
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-  margin-top: 0.5rem;
-}
-
-/* Mobile tweaks */
-@media (max-width: 768px) {
-  .nav-main ul {
-    flex-direction: column;
-    gap: 0.5rem;
-    width: 100%;
-  }
-
-  nav {
-    padding: 1rem;
-  }
-
-  .hamburger {
-    display: block;
-  }
-}
-
-/* Logo under buttons */
-nav .logo {
-  display: block;
-  font-weight: bold;
-  font-size: 1.8rem;
-  text-align: center;
-  color: var(--text-color);
-}
-nav ul {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-}
+/* nav buttons */
 
 nav ul li a {
   background: var(--btn-bg);
   color: var(--btn-text);
-  padding: 0.5rem 1rem;
+  border: 1px solid var(--btn-border);
+
+  padding: 8px 14px;
   border-radius: 6px;
   text-decoration: none;
-  border: 1px solid var(--btn-border);
-  transition: background 0.3s, color 0.3s;
+
+  transition: 0.3s;
 }
 
 nav ul li a:hover {
   background: var(--btn-text);
-  color: var(--btn-bg);
+  color: var(--bg-color);
 }
 
-nav .lang-switch,
-nav .theme-switcher {
-  margin-left: 1rem;
-  cursor: pointer;
-}
+/* language + theme buttons */
 
-.hamburger {
-  display: none;
-  font-size: 2rem;
-  cursor: pointer;
-}
-
-/* HERO ART LAYOUT */
-.hero-art {
-  height: 70vh;
-  background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
+.nav-actions {
+  margin-top: 8px;
   display: flex;
-  align-items: center;       /* vertical center */
-  justify-content: center;   /* horizontal center */
-  flex-direction: column;    /* stack overlay content vertically */
-  position: relative;
+  gap: 8px;
 }
 
-/* Center overlay text and buttons */
-.hero-overlay {
-  text-align: center;
-  color: #fff;
-  padding: 2rem 1rem;
-  background: rgba(0,0,0,0.55);
-  border-radius: 10px;
-  backdrop-filter: blur(3px);
-  display: flex;
-  flex-direction: column;    /* stack heading + paragraph + buttons */
-  align-items: center;       /* horizontal center */
-  gap: 1.5rem;               /* spacing between elements */
-}
-
-/* Push the buttons row slightly lower */
-.hero-btn {
-  margin-top: 1rem;          /* spacing from the paragraph above */
-  padding: 0.6rem 1.5rem;
-  border: 2px solid #fff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.hero-btn:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Move “ThisIsArtElias” logo under buttons for mobile/hero effect */
-.logo {
-  display: block;
-  text-align: center;
-  width: 100%;
-  margin-top: 1.5rem; /* space below buttons */
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: var(--text-color);
-}
-
-/* ===============================
-   BUTTONS & LINKS
-   =============================== */
-button, a {
+.nav-actions button {
   background: var(--btn-bg);
   color: var(--btn-text);
   border: 1px solid var(--btn-border);
-  padding: 0.5rem 1rem;
+
+  padding: 6px 10px;
   border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
+
+  cursor: pointer;
 }
 
-button:hover, a:hover {
-  background: var(--btn-text);
-  color: var(--btn-bg);
-}
+/* logo */
 
-/* ===============================
-   FORMS
-   =============================== */
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-form input, form textarea {
-  padding: 0.75rem;
-  border-radius: 6px;
-  border: 1px solid var(--btn-border);
-  background: var(--card-bg);
-  color: var(--section-text);
-  font-family: inherit;
-}
-
-.form-success {
-  display: none;
-  text-align: center;
-  margin-top: 1rem;
+.logo {
+  margin-top: 25px;
+  font-size: 1.8rem;
   font-weight: bold;
-  color: #0f0;
+  text-align: center;
 }
 
 /* ===============================
-   PORTFOLIO GRID & HOMEPAGE FEATURED
-   =============================== */
+HAMBURGER
+=============================== */
+
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* ===============================
+HERO
+=============================== */
+
+.hero-art {
+  height: 70vh;
+  background: url("images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif") center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  text-align: center;
+
+  padding: 30px;
+
+  background: rgba(0,0,0,0.45);
+  backdrop-filter: blur(4px);
+
+  border-radius: 10px;
+}
+
+.hero-btn {
+  margin-top: 15px;
+
+  border: 2px solid white;
+  padding: 10px 20px;
+
+  color: white;
+  text-decoration: none;
+
+  border-radius: 6px;
+}
+
+.hero-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* ===============================
+PORTFOLIO
+=============================== */
+
 .portfolio-grid,
 .homepage-featured {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 20px;
 }
 
 .portfolio-grid img,
 .homepage-featured img {
+
   width: 100%;
-  height: auto;
   max-height: 250px;
   object-fit: cover;
-  border-radius: 4px;
-  transition: transform 0.4s ease, opacity 0.4s ease;
+
+  border-radius: 6px;
+
+  transition: 0.4s;
 }
 
 .portfolio-grid img:hover,
 .homepage-featured img:hover {
+
   transform: scale(1.03);
-  opacity: 0.95;
 }
 
 /* ===============================
-   GET-IN-TOUCH SECTION
-   =============================== */
+FORMS
+=============================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid var(--btn-border);
+}
+
+/* ===============================
+GET IN TOUCH
+=============================== */
+
 .get-in-touch {
   text-align: center;
 }
 
-.get-in-touch a {
-  display: inline-block;
-  margin-top: 1rem;
-}
-
 /* ===============================
-   ANIMATIONS
-   =============================== */
+ANIMATION
+=============================== */
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: all 0.6s ease;
+  transition: 0.6s;
 }
 
 .fade-up.animate {
@@ -340,64 +275,37 @@ form input, form textarea {
 }
 
 /* ===============================
-   FOOTER
-   =============================== */
+FOOTER
+=============================== */
+
 footer {
   text-align: center;
   padding: 40px;
   background: #0000006e;
-  color: #fff;
 }
 
 /* ===============================
-   MOBILE FIXES
-   =============================== */
-@media (max-width: 768px) {
-  nav {
-    padding: 1rem;
-    flex-wrap: wrap;
-  }
+MOBILE
+=============================== */
 
-  .hamburger {
-    display: block;
-    margin-left: auto;
-  }
+@media (max-width:768px){
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    padding-left: 0;
-    margin: 0;
-    box-sizing: border-box;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav .logo {
-    flex: 1 1 auto;
-  }
-
-  nav .nav-actions {
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    margin-top: 0.5rem;
-  }
+nav ul{
+  display:none;
+  flex-direction:column;
+  gap:10px;
 }
 
-/* Move EN/NL + theme buttons below main nav and center */
-.nav-actions {
-  display: flex;
-  justify-content: center;   /* center horizontally */
-  gap: 1rem;                 /* space between buttons */
-  margin-top: 1rem;          /* space below main nav buttons */
+nav ul.active{
+  display:flex;
 }
 
-/* Make buttons slightly smaller and aligned nicely */
-.nav-actions button {
-  padding: 0.4rem 0.8rem;
-  font-size: 0.9rem;
+.hamburger{
+  display:block;
+}
+
+.nav-main{
+  width:100%;
+}
+
 }
