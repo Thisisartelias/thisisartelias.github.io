@@ -4,12 +4,18 @@
     <loc>https://thisisartelias.com/</loc>
   </url>
   <url>
-    <loc>https://thisisartelias.com/portfolio</loc>
+    <loc>https://thisisartelias.com/portfolio.html</loc>
   </url>
   <url>
-    <loc>https://thisisartelias.com/commissions</loc>
+    <loc>https://thisisartelias.com/story.html</loc>
   </url>
   <url>
-    <loc>https://thisisartelias.com/contact</loc>
+    <loc>https://thisisartelias.com/commissions.html</loc>
+  </url>
+  <url>
+    <loc>https://thisisartelias.com/contact.html</loc>
+  </url>
+  <url>
+    <loc>https://thisisartelias.com/news.html</loc>
   </url>
 </urlset>

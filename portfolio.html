@@ -1,79 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ThisIsArtElias | Portfolio of Abstract & Modern Artwork</title>
-<meta name="description" content="Browse Elias's portfolio of abstract, modern, and colorful artworks. Explore original canvases and commission-ready pieces.">
-<link rel="canonical" href="https://thisisartelias.com/portfolio.html">
-
-<!-- Open Graph -->
-<meta property="og:title" content="ThisIsArtElias | Portfolio of Abstract & Modern Artwork">
-<meta property="og:description" content="Explore Elias's collection of abstract, modern, and colorful paintings. Commission your own artwork.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://thisisartelias.com/portfolio.html">
-<meta property="og:image" content="https://thisisartelias.com/images/portfolio-featured.jpg">
-
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThisIsArtElias | Gallery</title>
+  <meta
+    name="description"
+    content="Browse the gallery of abstract paintings by Elias, featuring expressive textures, color studies, and original works."
+  >
+  <link rel="canonical" href="https://thisisartelias.com/portfolio.html">
+  <meta property="og:title" content="ThisIsArtElias | Gallery">
+  <meta
+    property="og:description"
+    content="Explore a curated gallery of original abstract artwork by Elias."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thisisartelias.com/portfolio.html">
+  <meta property="og:image" content="https://thisisartelias.com/images/picture2.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-bg"></div>
 
-<!-- Top Banner -->
-<div class="top-banner" id="top-banner">
-  Work in progress, some functions might not work
-  <span id="banner-close">&times;</span>
-</div>
+  <header class="site-header">
+    <a class="brand" href="index.html">ThisIsArtElias</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a class="active" href="portfolio.html">Gallery</a>
+      <a href="story.html">Story</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://www.instagram.com/thisisartelias/" target="_blank" rel="noreferrer">Instagram</a>
+    </nav>
+  </header>
 
-<!-- Navigation -->
-<nav>
-  <div class="logo">ThisIsArtElias</div>
-  <div class="hamburger" id="hamburger">&#9776;</div>
+  <main class="page-shell">
+    <section class="page-hero panel" data-reveal>
+      <p class="eyebrow">Gallery</p>
+      <h1>Selected paintings and studies.</h1>
+      <p class="lead">
+        A cleaner gallery presentation for original abstract work, using the artwork itself as the
+        main focus.
+      </p>
+    </section>
 
-  <ul id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="story.html">My Story</a></li>
-    <li><a href="commissions.html">Commissions</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+    <section class="content-section panel" data-reveal>
+      <div class="masonry-grid">
+        <figure class="gallery-tile tile-tall">
+          <img src="images/picture2.jpeg" alt="Large colorful abstract painting by Elias">
+        </figure>
+        <figure class="gallery-tile">
+          <img src="images/7c25e543-9f31-4599-a0f7-07287e04e680.avif" alt="Abstract painting by Elias">
+        </figure>
+        <figure class="gallery-tile">
+          <img src="images/235c3871-061b-4ea9-acba-42b4565384a6.avif" alt="Modern abstract artwork by Elias">
+        </figure>
+        <figure class="gallery-tile tile-wide">
+          <img src="images/28c69ade-3f8a-49a5-aec9-33902f7dcc46.avif" alt="Abstract composition by Elias">
+        </figure>
+        <figure class="gallery-tile">
+          <img src="images/a4100c83-eb10-4f36-8824-1181a4a9bfd9.avif" alt="Textured artwork by Elias">
+        </figure>
+        <figure class="gallery-tile">
+          <img src="images/ae6c561b-83cf-4cf8-8e55-550bc19c5722.avif" alt="Expressive abstract painting by Elias">
+        </figure>
+        <figure class="gallery-tile">
+          <img src="images/160f75e6-2536-4972-ad88-e9c4242b3c1d.avif" alt="Original abstract art by Elias">
+        </figure>
+        <figure class="gallery-tile tile-wide">
+          <img src="images/X-ray art 58x78cm.jpg" alt="X-ray inspired artwork by Elias">
+        </figure>
+      </div>
+    </section>
+  </main>
 
-  <div class="nav-actions">
-    <button id="lang-en" class="lang-switch">EN</button>
-    <button id="lang-nl" class="lang-switch">NL</button>
-    <button id="theme-toggle" class="theme-switcher">🌙</button>
-  </div>
-</nav>
+  <footer class="site-footer panel" data-reveal>
+    <p class="footer-brand">ThisIsArtElias</p>
+    <div class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="commissions.html">Commissions</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </footer>
 
-<!-- Portfolio Hero -->
-<section class="hero-art fade-up" aria-label="Portfolio">
-  <div class="hero-overlay">
-    <h1>
-      <span class="lang-en">Portfolio</span>
-      <span class="lang-nl">Portfolio</span>
-    </h1>
-    <p>
-      <span class="lang-en">Discover my collection of abstract, modern, and colorful artworks.</span>
-      <span class="lang-nl">Ontdek mijn collectie abstracte, moderne en kleurrijke kunstwerken.</span>
-    </p>
-  </div>
-</section>
-
-<!-- Portfolio Gallery -->
-<section class="portfolio-grid fade-up" aria-label="Artwork Gallery">
-  <img src="images/7c25e543-9f31-4599-a0f7-07287e04e680.avif" alt="Abstract Painting 1 by Elias">
-  <img src="images/picture2.jpeg" alt="Abstract Painting 2 by Elias">
-  <img src="images/235c3871-061b-4ea9-acba-42b4565384a6.avif" alt="Abstract Painting 3 by Elias">
-  <img src="images/28c69ade-3f8a-49a5-aec9-33902f7dcc46.avif" alt="Abstract Painting 4 by Elias">
-  <!-- Add more images here -->
-</section>
-
-<footer aria-label="Footer">
-  &copy; 2026 ThisIsArtElias. All Rights Reserved.
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

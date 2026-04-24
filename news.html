@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ThisIsArtElias | Abstract Art Paintings, Modern Canvas Artwork & Custom Commissions</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-<meta name="description" content="Abstract art by Elias — modern expressive paintings in black, white, and color. View portfolio or request a custom commission.">
-<link rel="canonical" href="https://thisisartelias.com/news" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThisIsArtElias | News</title>
+  <meta
+    name="description"
+    content="Latest updates from ThisIsArtElias, including exhibitions, new work, and upcoming projects."
+  >
+  <link rel="canonical" href="https://thisisartelias.com/news.html">
+  <meta property="og:title" content="ThisIsArtElias | News">
+  <meta
+    property="og:description"
+    content="Stay up to date with new work, exhibitions, and recent announcements."
+  >
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://thisisartelias.com/news.html">
+  <meta property="og:image" content="https://thisisartelias.com/images/7c25e543-9f31-4599-a0f7-07287e04e680.avif">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="site-bg"></div>
 
-<div class="top-banner" id="top-banner">
-  Work in progress, some functions might not work
-  <span id="banner-close">&times;</span>
-</div>
+  <header class="site-header">
+    <a class="brand" href="index.html">ThisIsArtElias</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav class="site-nav" id="site-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Gallery</a>
+      <a href="story.html">Story</a>
+      <a href="commissions.html">Commissions</a>
+      <a class="active" href="news.html">News</a>
+      <a href="contact.html">Contact</a>
+      <a class="nav-cta" href="https://www.instagram.com/thisisartelias/" target="_blank" rel="noreferrer">Instagram</a>
+    </nav>
+  </header>
 
-<nav>
-  <div class="logo">ThisIsArtElias</div>
+  <main class="page-shell">
+    <section class="page-hero panel" data-reveal>
+      <p class="eyebrow">News</p>
+      <h1>Updates, exhibitions, and new work.</h1>
+      <p class="lead">
+        A simple page for sharing recent progress and future announcements.
+      </p>
+    </section>
 
-  <!-- Hamburger toggle button for mobile -->
-  <div class="hamburger" id="hamburger">
-    &#9776;
-  </div>
+    <section class="content-section panel" data-reveal>
+      <div class="news-card">
+        <p class="art-meta">Current Status</p>
+        <h3>New updates coming soon.</h3>
+        <p>
+          This page is ready for future exhibition dates, releases, press mentions, or project
+          updates. For now, the latest work can be followed through the gallery and Instagram.
+        </p>
+        <a class="text-link" href="https://www.instagram.com/thisisartelias/" target="_blank" rel="noreferrer">
+          See the latest on Instagram
+        </a>
+      </div>
+    </section>
+  </main>
 
-  <ul id="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="story.html">My Story</a></li>
-    <li><a href="commissions.html">Commissions</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
+  <footer class="site-footer panel" data-reveal>
+    <p class="footer-brand">ThisIsArtElias</p>
+    <div class="footer-links">
+      <a href="portfolio.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+      <a href="https://www.instagram.com/thisisartelias/" target="_blank" rel="noreferrer">Instagram</a>
+    </div>
+  </footer>
 
-  <div class="nav-actions">
-<!-- Language switcher -->
-<button id="lang-en" class="lang-switch">EN</button>
-<button id="lang-nl" class="lang-switch">NL</button>
-
-<!-- Theme toggle -->
-<button id="theme-toggle" class="theme-switcher">🌙</button>
-  </div>
-</nav>
-
-<section>
-  <h1>
-    <span class="lang-en">News</span>
-    <span class="lang-nl">Nieuws</span>
-  </h1>
-  <p>
-    <span class="lang-en">Stay updated with my latest projects, exhibitions, and releases.</span>
-    <span class="lang-nl">Blijf op de hoogte van mijn nieuwste projecten, tentoonstellingen en releases.</span>
-  </p>
-  <div class="news-grid">
-    <article>
-      <h3>
-        <span class="lang-en">No news at the moment.</span>
-        <span class="lang-nl">Momenteel geen nieuws.</span>
-      </h3>
-    </article>
-  </div>
-</section>
-
-<footer>
-  &copy; 2026 ThisIsArtElias. All Rights Reserved.
-</footer>
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
