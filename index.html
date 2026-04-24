@@ -8,21 +8,60 @@
     name="description"
     content="A clean artist portfolio for Elias, featuring abstract paintings, selected works, and custom commissions."
   >
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://thisisartelias.com/">
   <meta property="og:title" content="ThisIsArtElias | Abstract Art Portfolio">
   <meta
     property="og:description"
-    content="Discover original abstract paintings and custom commissions by Elias."
+    content="Discover original abstract paintings, a curated gallery, and custom commissions by Elias."
   >
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://thisisartelias.com/">
   <meta property="og:image" content="https://thisisartelias.com/images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif">
+  <meta property="og:site_name" content="ThisIsArtElias">
+  <meta property="og:locale" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ThisIsArtElias | Abstract Art Portfolio">
+  <meta
+    name="twitter:description"
+    content="Discover original abstract paintings, a curated gallery, and custom commissions by Elias."
+  >
+  <meta name="twitter:image" content="https://thisisartelias.com/images/cbc374a1-fc2b-40c4-8a60-979754474e03.avif">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,500;6..72,700&display=swap"
     rel="stylesheet"
   >
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "ThisIsArtElias",
+      "url": "https://thisisartelias.com/",
+      "description": "A clean artist portfolio for Elias, featuring abstract paintings, selected works, and custom commissions.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Elias"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Elias",
+      "url": "https://thisisartelias.com/",
+      "sameAs": [
+        "https://www.instagram.com/thisisartelias/"
+      ],
+      "jobTitle": "Abstract Artist",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "ThisIsArtElias"
+      }
+    }
+  </script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -45,10 +84,11 @@
   <main class="page-shell">
     <section class="hero-grid panel" data-reveal>
       <div class="hero-copy">
-        <p class="eyebrow">Abstract Art</p>
-        <h2>ThisIsArtElias</h2>
+        <p class="eyebrow">Abstract Art Portfolio</p>
+        <h1>Clean, expressive paintings with a gallery atmosphere.</h1>
         <p class="lead">
-I’m Elias, a 13 year old artist from the Netherlands, passionate about abstract art. <br> Here you’ll find a collection of my creations.
+          ThisIsArtElias is the portfolio of Elias, a young artist from the Netherlands creating
+          abstract work with movement, color, and a strong visual identity.
         </p>
         <div class="button-row">
           <a class="button button-primary" href="portfolio.html">View Gallery</a>
@@ -66,6 +106,13 @@ I’m Elias, a 13 year old artist from the Netherlands, passionate about abstrac
       </div>
     </section>
 
+    <section class="statement panel" data-reveal>
+      <p>
+        A professional artist website should feel calm, intentional, and visual first. This version
+        puts the artwork at the center and gives the site a cleaner, more refined presentation.
+      </p>
+    </section>
+
     <section class="content-section panel" data-reveal>
       <div class="section-heading">
         <p class="eyebrow">Selected Works</p>
@@ -77,21 +124,24 @@ I’m Elias, a 13 year old artist from the Netherlands, passionate about abstrac
           <img src="images/picture2.jpeg" alt="Colorful abstract painting by Elias">
           <div class="art-copy">
             <p class="art-meta">Featured Piece</p>
-            <p>I made this piece for a local business. This was my first commission.</p>
+            <h3>Color In Motion</h3>
+            <p>Layered texture, contrast, and a bold palette designed to make a room feel alive.</p>
           </div>
         </article>
 
         <article class="art-card">
           <img src="images/235c3871-061b-4ea9-acba-42b4565384a6.avif" alt="Abstract canvas artwork by Elias">
           <div class="art-copy">
-            <p class="art-meta">Piece 2</p>
+            <p class="art-meta">Study I</p>
+            <h3>Blue Structure</h3>
           </div>
         </article>
 
         <article class="art-card">
           <img src="images/28c69ade-3f8a-49a5-aec9-33902f7dcc46.avif" alt="Modern abstract painting by Elias">
           <div class="art-copy">
-            <p class="art-meta">Piece 3</p>
+            <p class="art-meta">Study II</p>
+            <h3>Warm Contrast</h3>
           </div>
         </article>
       </div>
@@ -104,7 +154,12 @@ I’m Elias, a 13 year old artist from the Netherlands, passionate about abstrac
       </div>
       <div class="text-stack">
         <p>
-          I'm Elias, 13 years old. I'm based in the Netherlands. For everything about me, check out the "My Story" page
+          I'm Elias, 13 years old, from the Netherlands. I make and love abstract art, and this site
+          is a place to present that work in a more professional way.
+        </p>
+        <p>
+          My paintings focus on color, movement, and feeling. Some pieces are bold and energetic,
+          others are more minimal, but each one is designed to feel original and personal.
         </p>
         <a class="text-link" href="story.html">Read my story</a>
       </div>
@@ -122,7 +177,7 @@ I’m Elias, a 13 year old artist from the Netherlands, passionate about abstrac
           <h3>Original abstract work</h3>
           <p>
             Commissions are available in different sizes and color directions. Pieces can be made to
-            suit a room, mood, or a visual idea.
+            suit a room, mood, or visual idea.
           </p>
           <ul>
             <li>Custom size options</li>
@@ -134,12 +189,12 @@ I’m Elias, a 13 year old artist from the Netherlands, passionate about abstrac
 
         <article class="info-card">
           <p class="art-meta">How It Works</p>
-          <h3>Your custom piece</h3>
+          <h3>Clear and personal</h3>
           <p>
-            Share your preferred size, colors, timeline, and budget. I will reply within 3 business days so
+            Share your preferred size, colors, timeline, and budget. I will reply within 3 days so
             we can discuss the piece together.
           </p>
-          <a class="text-link" href="contact.html">Contact me</a>
+          <a class="text-link" href="contact.html">Start an enquiry</a>
         </article>
       </div>
     </section>
