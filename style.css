@@ -1541,3 +1541,16 @@ h3 {
 .placeholder-portrait {
     overflow: hidden;
 }
+
+
+.cover-art {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.placeholder-square {
+    overflow: hidden;
+    padding: 0;
+}
